@@ -15,4 +15,14 @@ describe('gendiff', () => {
     const expectedResult = readFile('expected_plain.txt');
     expect(result).toEqual(expectedResult);
   });
+  test('compare plain yaml', () => {
+    const result = gendiff(getPath('file1.yaml'), getPath('file2.yaml'), null);
+    const expectedResult = readFile('expected_plain.txt');
+    expect(result).toEqual(expectedResult);
+  });
+  test('compare plain yml', () => {
+    const result = gendiff(getPath('file1.yml'), getPath('file2.yml'), null);
+    const expectedResult = readFile('expected_plain.txt');
+    expect(result).toEqual(expectedResult);
+  });
 });

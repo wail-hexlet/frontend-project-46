@@ -2,16 +2,17 @@ import fs from 'fs';
 import path from 'path';
 import process from 'process';
 import findDiff from './findDiff.js';
+import formatType from './formatters/index.js';
+import parseData from './parsers.js';
 
 const getFileContent = (filepath) => {
   const fullFilePath = path.resolve(process.cwd(), filepath);
-  return fs.readFileSync(fullFilePath, 'utf8');
+  return parseData(fs.readFileSync(fullFilePath, 'utf8'), path.extname(fullFilePath));
 };
 
-const genDiff = (filepath1, filepath2, options) => {
-  const data1 = JSON.parse(getFileContent(filepath1));
-  const data2 = JSON.parse(getFileContent(filepath2));
-  return findDiff(data1, data2);
+const genDiff = (filepath1, filepath2, options = 'plain') => {
+  const difference = findDiff(getFileContent(filepath1), getFileContent(filepath2));
+  return formatType(options)(difference);
 };
 
 export default genDiff;
