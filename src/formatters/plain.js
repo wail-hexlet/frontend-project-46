@@ -12,7 +12,7 @@ const plain = (object, path = '') => {
       case 'tree': return `${plain(node[i], `${path}${name}.`)}`;
       case 'added': return `Property '${path}${name}' was added with value: ${stringify(node[i].value)}`;
       case 'updated': return `Property '${path}${name}' was updated. From ${stringify(oldValue)} to ${stringify(node[i].value)}`;
-      case 'removed': return `Property '${path}${name}' was removed.`;
+      case 'removed': return `Property '${path}${name}' was removed`;
       case 'unchanged': return null;
       default: return null;
     }
