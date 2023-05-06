@@ -16,3 +16,6 @@
 <br /><br />
 7 step:<br />
 <a href="https://asciinema.org/a/NwOxnDzzmDoEobNt597bUQ5B9" target="_blank"><img src="https://asciinema.org/a/NwOxnDzzmDoEobNt597bUQ5B9.svg" /></a>
+<br /><br />
+8 step:<br />
+<a href="https://asciinema.org/a/BTYZSEY7xI0OU9CttizESCAO0" target="_blank"><img src="https://asciinema.org/a/BTYZSEY7xI0OU9CttizESCAO0.svg" /></a>
