@@ -11,17 +11,17 @@ const readFile = (fileName) => readFileSync(getPath(fileName), 'utf-8');
 
 describe('gendiff', () => {
   test('compare plain json', () => {
-    const result = gendiff(getPath('file1.json'), getPath('file2.json'), null);
+    const result = gendiff(getPath('file1.json'), getPath('file2.json'), 'plain');
     const expectedResult = readFile('expected_plain.txt');
     expect(result).toEqual(expectedResult);
   });
   test('compare plain yaml', () => {
-    const result = gendiff(getPath('file1.yaml'), getPath('file2.yaml'), null);
+    const result = gendiff(getPath('file1.yaml'), getPath('file2.yaml'), 'plain');
     const expectedResult = readFile('expected_plain.txt');
     expect(result).toEqual(expectedResult);
   });
   test('compare plain yml', () => {
-    const result = gendiff(getPath('file1.yml'), getPath('file2.yml'), null);
+    const result = gendiff(getPath('file1.yml'), getPath('file2.yml'), 'plain');
     const expectedResult = readFile('expected_plain.txt');
     expect(result).toEqual(expectedResult);
   });
