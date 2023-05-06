@@ -1,8 +1,0 @@
-name: GitHub Actions
-run-name: Github Actions by ${{ github.actor }}
-on: [push, pull-request]
-jobs:
-  Explore-GitHub-Actions:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Was started by an ${{ github.event_name }} event, on a ${{ runner.os }} server, for ${{ github.repository }} repo and ${{ github.ref }} branch"
