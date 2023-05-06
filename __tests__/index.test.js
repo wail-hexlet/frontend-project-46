@@ -10,7 +10,7 @@ const getPath = (fileName) => path.join(__dirname, '..', '__fixtures__', fileNam
 const readFile = (fileName) => readFileSync(getPath(fileName), 'utf-8');
 
 describe('gendiff', () => {
-  const fileTypes = ['stylish'];
+  const fileTypes = ['stylish', 'plain'];
   const fileExtensions = ['json', 'yaml', 'yml'];
 
   for (let iT = 0; iT < fileTypes.length; iT += 1) {
