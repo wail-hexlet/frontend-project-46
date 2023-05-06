@@ -1,5 +1,8 @@
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/wail-hexlet/frontend-project-46/workflows/hexlet-check/badge.svg)](https://github.com/wail-hexlet/frontend-project-46/actions)
+[![Github actions](https://github.com/wail-hexlet/frontend-project-46/workflows/gt-actions/badge.svg)]
+[![Maintainability](https://api.codeclimate.com/v1/badges/0f0ff953bd561069acb4/maintainability)](https://codeclimate.com/github/wail-hexlet/frontend-project-46/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0f0ff953bd561069acb4/test_coverage)](https://codeclimate.com/github/wail-hexlet/frontend-project-46/test_coverage)
 
 <a href="https://codeclimate.com/github/wail-hexlet/frontend-project-46/maintainability"><img src="https://api.codeclimate.com/v1/badges/365e979fcf305b5d86e8/maintainability" /></a>
 
