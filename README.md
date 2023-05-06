@@ -10,3 +10,6 @@
 <br /><br />
 5 step:<br />
 <a href="https://asciinema.org/a/EStPO2s0qpMOwhQOSJNXImzif" target="_blank"><img src="https://asciinema.org/a/EStPO2s0qpMOwhQOSJNXImzif.svg" /></a>
+<br /><br />
+6 step:<br />
+<a href="https://asciinema.org/a/4N5P04Wi2ET7oI3WdbtalTX3W" target="_blank"><img src="https://asciinema.org/a/4N5P04Wi2ET7oI3WdbtalTX3W.svg" /></a>

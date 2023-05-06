@@ -10,19 +10,16 @@ const getPath = (fileName) => path.join(__dirname, '..', '__fixtures__', fileNam
 const readFile = (fileName) => readFileSync(getPath(fileName), 'utf-8');
 
 describe('gendiff', () => {
-  test('compare plain json', () => {
-    const result = gendiff(getPath('file1.json'), getPath('file2.json'), 'plain');
-    const expectedResult = readFile('expected_plain.txt');
-    expect(result).toEqual(expectedResult);
-  });
-  test('compare plain yaml', () => {
-    const result = gendiff(getPath('file1.yaml'), getPath('file2.yaml'), 'plain');
-    const expectedResult = readFile('expected_plain.txt');
-    expect(result).toEqual(expectedResult);
-  });
-  test('compare plain yml', () => {
-    const result = gendiff(getPath('file1.yml'), getPath('file2.yml'), 'plain');
-    const expectedResult = readFile('expected_plain.txt');
-    expect(result).toEqual(expectedResult);
-  });
+  const fileTypes = ['stylish'];
+  const fileExtensions = ['json', 'yaml', 'yml'];
+
+  for (let iT = 0; iT < fileTypes.length; iT += 1) {
+    const expectedResult = readFile(`expected_${fileTypes[iT]}.txt`);
+    for (let iE = 0; iE < fileExtensions.length; iE += 1) {
+      test(`compare ${fileTypes[iT]} ${fileExtensions[iE]}`, () => {
+        const result = gendiff(getPath(`file1.${fileExtensions[iE]}`), getPath(`file2.${fileExtensions[iE]}`), fileTypes[iT]);
+        expect(result).toEqual(expectedResult);
+      });
+    }
+  }
 });

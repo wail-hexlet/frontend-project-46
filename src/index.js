@@ -10,7 +10,7 @@ const getFileContent = (filepath) => {
   return parseData(fs.readFileSync(fullFilePath, 'utf8'), path.extname(fullFilePath));
 };
 
-const genDiff = (filepath1, filepath2, options = 'plain') => {
+const genDiff = (filepath1, filepath2, options = 'stylish') => {
   const difference = findDiff(getFileContent(filepath1), getFileContent(filepath2));
   return formatType(options)(difference);
 };
